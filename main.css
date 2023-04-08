@@ -1,0 +1,171 @@
+body{
+    background-color:bisque;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu_item{
+    display: flex;
+    justify-content:space-between;
+    height: 35px;
+    list-style: none;
+    margin: 20px;
+}
+
+.menu_item img{
+    width: 50px;
+    padding-right:5px;
+    padding-left: 5px;
+}
+
+a{
+    text-decoration: none;
+    display: flex;
+    align-items:center; 
+    color: black;
+}
+.menu_item-mail{
+ text-transform:uppercase;
+}
+
+.menu-end{
+    color: darkgrey;
+    height: 3px;
+    width: 100%;
+    background-color: darkgray;
+}
+
+.letters_items{
+    width: 200px;
+    text-transform:capitalize;  
+}
+.letters_items ul{
+    line-height: 250%;
+}
+
+.letters_items img{
+    width: 45px;
+    padding-right:10px;
+    padding-left: 10px;
+}
+li{
+    list-style-type: none;
+}
+.letters_items a:hover {
+    background-color: rgb(238, 201, 79); 
+}
+
+
+.container{
+    display: flex;
+}
+
+.mails {
+    width: calc(100% - 200px);
+}
+
+.letter_block {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(10, 10, 10);
+}
+
+.letter_block:hover {
+    background-color: rgb(238, 201, 79);
+}
+
+.letter_block img {
+    width: 15px;
+}
+
+.from-whom {
+    display: flex;
+    width: 200px;
+    gap: 15px;
+    padding-left: 10px;
+    align-items: center;
+}
+
+.content-letter {
+    display: flex;
+    width: calc(100% - 350px);
+    white-space: nowrap;
+}
+
+.grey-text {
+    color: gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.grey-text::before {
+    content: "-";
+    color: gray;
+    padding: 0 3px;
+}
+
+
+.date-letter {
+    display: flex;
+    width: 150px;
+    gap: 15px;
+    padding-right: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    .letter_block {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .content-letter {
+        flex-direction: column;
+        padding-left: 40px;
+        width: calc(100% - 60px);
+    }
+
+    .grey-text::before {
+        content: "";
+        padding: 0;
+    }
+
+    .date-letter {
+        position: absolute;
+        right: 0;
+    }
+    
+}
+
+@media screen and (max-width: 550px) {
+    .letters_items {
+        width: 80px;
+    }
+    .magic{
+        visibility: hidden;
+        opacity: 0;
+    
+    } 
+
+    .letters_items:hover{
+        visibility: visible;
+        opacity: 1;
+        background-color:rgb(169, 194, 195);
+        width: 250px;
+    } 
+    .mails {
+        width: calc(100% - 80px);
+    }
+
+    .from-whom {
+        gap: 5px;
+        width: auto;
+    }
+
+    .content-letter {
+        padding-left: 30px;
+    } 
+}
